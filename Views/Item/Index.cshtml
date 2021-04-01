@@ -68,12 +68,12 @@
 
                         <td width="10%">
                             <div class="col-6 p-1 text-center">
-                                <a asp-controller="Item" asp-action="Update" class="btn btn-secondary">Update</a>
+                                <a asp-controller="Item" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-secondary">Update</a>
                             </div>
                         </td>
                         <td width="10%">
                             <div class="col-6 p-1 text-center">
-                                <a asp-controller="Item" asp-action="Delete" class="btn btn-danger">Delete</a>
+                                <a asp-controller="Item" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a>
                             </div>
                         </td>
                     </tr>

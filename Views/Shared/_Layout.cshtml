@@ -38,40 +38,53 @@
         </main>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                Contact Information
-                <ul>
+    <!-- Start of upper footer -->
+    <div class="container border-top text-muted bg-light p-4">
+        <div class="row m-xl-1">
+            <div class="col-md">
+                <div class="badge-info p-2">Contact Information</div>
+                <ul class="p-4">
                     <li>name</li>
                     <li>contact information</li>
                     <li>Link 2</li>
                     <li>Link 3</li>
                 </ul>
             </div>
-            <div class="col-sm">
-                Useful Links
-                <ul>
+            <div class="col-md-4">
+                <div class="badge-info p-2">Useful Links</div>
+                <ul class="p-4">
                     <li>name</li>
                     <li>contact information</li>
                     <li>Link 2</li>
                     <li>Link 3</li>
                 </ul>
             </div>
-            <div class="col-sm">
-                Privacy
-                <ul>
+            <div class="col-md-4">
+                <div class="badge-info p-2">Privacy Information</div>
+                <ul class="p-4">
                     <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
                     <li>contact information</li>
                     <li>Link 2</li>
                     <li>Link 3</li>
                 </ul>
             </div>
+            <hr class="alert-danger" />
+            <div class="col-md-8 offset-2 p-3">
+                <div class="badge-info p-2 text-center">Get the latest updates from BlueMoon CRM</div>
+                <br />
+                <input class="form-control" placeholder="Enter your email:" />
+                <div class="p-3">
+                    <a class="btn btn-primary text-white w-50 col-md-8 offset-3">Subscribe</a>
+                </div>
+                <br />
+                <div class="badge-danger text-center p-2">* We are responsible data handlers and never spam - GDPR Compliant</div>
+            </div>
         </div>
     </div>
+    <!--Lower end footer -->
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Appointment &amp; Scheduling Application - <a href="https://212digital.co.uk">212 Digital</a> - Part of the BlueMoon CRM Family
+            &copy; 2021 - Appointment &amp; Scheduling Application - By <a href="https://212digital.co.uk">212 Digital</a> - Part of the <a href="https://bluemooncrm.com">BlueMoon CRM</a> Family
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
