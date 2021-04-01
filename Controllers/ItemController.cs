@@ -22,5 +22,23 @@ namespace AppointmentApp.Controllers
             IEnumerable<Item> objList = _db.Items;
             return View(objList);
         }
+
+        //Get-Create
+        public IActionResult CreateExpenses()
+        {
+             return View();
+        }
+
+        //Post-Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateExpenses(Item obj)
+        {
+            _db.Items.Add(obj);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
+
 }

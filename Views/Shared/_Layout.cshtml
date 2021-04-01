@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Appointments App</title>
+    <title>@ViewData["Title"] - BlueMoon CRM Family</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Appointment App</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="BlueMoon Appointments Scheduler App" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,9 +38,40 @@
         </main>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                Contact Information
+                <ul>
+                    <li>name</li>
+                    <li>contact information</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                Useful Links
+                <ul>
+                    <li>name</li>
+                    <li>contact information</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                Privacy
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                    <li>contact information</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - AppointmentApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+            &copy; 2021 - Appointment &amp; Scheduling Application - <a href="https://212digital.co.uk">212 Digital</a> - Part of the BlueMoon CRM Family
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
