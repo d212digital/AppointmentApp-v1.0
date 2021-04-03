@@ -13,40 +13,46 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand p-3" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="BlueMoon Appointments Scheduler App" /></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="Index">Expenses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Pricing" asp-action="Index">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Features" asp-action="Index">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Support">Support</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
-                        </li>
-                    </ul>
+    <div id="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand p-3" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="BlueMoon Appointments Scheduler App" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="Index">Expenses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Pricing" asp-action="Index">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Features" asp-action="Index">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Support">Support</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="col-md-3 text-end">
+                            <button type="button" class="btn btn-outline-primary me-2">Get Started</button>
+                            <button type="button" class="btn btn-primary">Sign-up</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-      <div class="container">
+            </nav>
+        </header>
+    </div>
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -60,7 +66,7 @@
                     <h3 class="footer-heading">Start a Project with BlueMoon - The Sotware Experts</h3>
                 </div>
                 <div class="d-flex-inline">
-                    <p>We are based in Manchester. We support clients and sites from around the globe. Below you will find all the contact details you need.</p>
+                    <p>We are based in Manchester. We support clients and sites from around the globe. Below you will find all the information you need.</p>
                 </div>
                 <div class="d-flex-inline pt-2"> <button class="btn-pink btn">START YOUR PROJECT</button> </div>
             </div>
@@ -84,7 +90,7 @@
                     <p class="mb-0">Poland</p>
                 </div>
                 <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
-                    <h5 class="places text-uppercase">Appointment Apps</h5>
+                    <h5 class="places text-uppercase">Appointment App</h5>
                     <p class="mb-0">Brain Embassy</p>
                     <p class="mb-0">Alaya Jerasublisuble RS123</p>
                     <p class="mb-0">02-222 Warsawa</p>
@@ -96,8 +102,10 @@
                     <p class="mb-0">London EC2A 4BK</p>
                 </div>
                 <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
-                    <h5 class="places text-uppercase">eCommerce Apps</h5>
-                    <p class="mb-0">Kristiansand</p>
+                    <h5 class="places text-uppercase">eCommerce Development</h5>
+                    <p class="mb-0">Full end to end solutions</p>
+                    <p class="mb-0">PWA Storefront</p>
+                    <p class="mb-0">Native IOS &amp; Android</p>
                 </div>
             </div>
             <div class="line mb-3 mx-auto"></div>
