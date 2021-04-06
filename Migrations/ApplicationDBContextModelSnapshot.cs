@@ -19,14 +19,14 @@ namespace AppointmentApp.Migrations
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("AppointmentApp.Models.ExpenseType", b =>
+            modelBuilder.Entity("AppointmentApp.Models.ExpenseTypes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ExpenseCode")
+                    b.Property<int>("ExpenseTypeCode")
                         .HasColumnType("int");
 
                     b.Property<string>("ExpenseTypeName")
@@ -57,7 +57,7 @@ namespace AppointmentApp.Migrations
                     b.Property<string>("ExpenseName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ExpenseType")
+                    b.Property<string>("ExpenseTypes")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

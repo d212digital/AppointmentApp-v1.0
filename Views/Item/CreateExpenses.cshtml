@@ -1,6 +1,7 @@
 ﻿@model AppointmentApp.Models.Item
 
 
+
 <h1 class="text-black-50 pl-2 text-center text-capitalize">Expenses</h1>
 <div class="border p-2">
     <h3 class="text-black-50 pl-2">How to enter new expenses</h3>
@@ -43,7 +44,9 @@
                         <input asp-for="ExpenseDate" class="form-control" />
                     </div>
                     <div class="col-2">
-                        <input asp-for="ExpenseCode" class="form-control" />
+                        <select asp-for="ExpenseCode" asp-items="@ViewBag.TypeDropDown" class="form-control">
+                            <option selected>--Select--</option>
+                        </select>
                     </div>
                     <div class="col-2">
                         <input asp-for="ExpenseType" class="form-control" />

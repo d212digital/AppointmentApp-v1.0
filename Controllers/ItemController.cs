@@ -1,6 +1,7 @@
 ﻿using AppointmentApp.Data;
 using AppointmentApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,15 @@ namespace AppointmentApp.Controllers
         // GET-Create
         public IActionResult CreateExpenses()
         {
+            IEnumerable<SelectListItem> TypeDropDown = _db.ExpenseTypes.Select(i => new SelectListItem
+                { 
+                Text = i.ExpenseTypeCode.ToString(),
+                Value = i.ExpenseTypeCode.ToString()
+
+            });
+
+            ViewBag.TypeDropDown = TypeDropDown;
+
             return View();
         }
 
