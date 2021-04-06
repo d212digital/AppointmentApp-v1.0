@@ -14,79 +14,74 @@
     </div>
     <br />
     <div class="row pt-4 border p-2">
-        <div class="col-6 p-2 text-black-50">
-            <ol>
-                <li>To run a specific expense date range report</li>
-                <li>Select a date range</li>
-                <li> Hit run report button</li>
-                <li> Enjoy your report</li>
-            </ol>
+        <div class="col-6 text-black-50">
+            <h2 class="text-black-50">Add new expense code(s)</h2>
+            </div>
+            <div class="col-6 text-right">
+                <a asp-controller="ExpenseType" asp-action="CreateExpenseType" class="btn btn-primary">Create New Expense Code</a>
+            </div>
         </div>
-        <div class="col-6 text-right">
-            <a asp-controller="Item" asp-action="CreateExpenses" class="btn btn-primary">Run New Expense Report</a>
-        </div>
-    </div>
-    <br />
+        <br />
 
-    @if (Model.Count() > 0)
-    {
-        <table class="table table-bordered table-striped" style="width:100%">
-            <thead>
-                <tr>
-                    <th>
-                        Date:
-                    </th>
-                    <th>
-                        Expense Code:
-                    </th>
-                    <th>
-                        Expense Type:
-                    </th>
-                    <th>
-                        Company Name:
-                    </th>
-                    <th>
-                        Expense Amount:
-                    </th>
-                    <th>
-                        Update:
-                    </th>
-                    <th>
-                        Delete:
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
+        @if (Model.Count() > 0)
+        {
+            <table class="table table-bordered table-striped" style="width:100%">
+                <thead>
                     <tr>
-                        <td width="15%">@item.ExpenseDate.ToShortDateString().ToString()</td>
-                        <td width="15%">@item.ExpenseCode</td>
-                        <td width="15%">@item.ExpenseType</td>
-                        <td width="15%">@item.ExpenseName</td>
-                        <td width="15%">£ @item.ExpenseAmount</td>
-
-                        <td width="10%">
-                            <div class="col-6 p-1 text-center">
-                                <a asp-controller="Item" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-secondary">Update</a>
-                            </div>
-                        </td>
-                        <td width="10%">
-                            <div class="col-6 p-1 text-center">
-                                <a asp-controller="Item" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a>
-                            </div>
-                        </td>
+                        <th>
+                            Date:
+                        </th>
+                        <th>
+                            Expense Code:
+                        </th>
+                        <th>
+                            Expense Type:
+                        </th>
+                        <th>
+                            Company Name:
+                        </th>
+                        <th>
+                            Expense Amount:
+                        </th>
+                        <th>
+                            Update:
+                        </th>
+                        <th>
+                            Delete:
+                        </th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        <p>No expenses have been created yet</p>
-    }
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td width="15%">@item.ExpenseDate.ToShortDateString().ToString()</td>
+                            <td width="15%">@item.ExpenseCode</td>
+                            <td width="15%">@item.ExpenseType</td>
+                            <td width="15%">@item.ExpenseName</td>
+                            <td width="15%">£ @item.ExpenseAmount</td>
 
-</div>
+                            <td width="10%">
+                                <div class="col-6 p-1 text-center">
+                                    <a asp-controller="Item" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-secondary">Update</a>
+                                </div>
+                            </td>
+                            <td width="10%">
+                                <div class="col-6 p-1 text-center">
+                                    <a asp-controller="Item" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No expenses have been created yet</p>
+        }
+
+    </div>
 
 
 
