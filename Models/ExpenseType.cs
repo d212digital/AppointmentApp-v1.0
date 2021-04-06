@@ -11,7 +11,7 @@ namespace AppointmentApp.Models
     public class ExpenseType
      {
         [Key]
-        public int ExpenseTypeCode { get; set; }
+        public int Id { get; set; }
 
         [DisplayName("Expense Code")]
         public int ExpenseTypeCode { get; set; }
