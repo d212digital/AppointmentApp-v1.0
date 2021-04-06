@@ -15,6 +15,7 @@ namespace AppointmentApp.Models
 
         [DisplayName("Expense Code")]
         public int ExpenseCode { get; set; }
+        [Required]
 
         [DisplayName("Expense Type Name")]
         public string ExpenseTypeName { get; set; }
